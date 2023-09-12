@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+// Function to perform Counting Sort
+void countingSort(int array[], int size) {
+  // ... (Same counting sort code as before)
+}
+
+// Function to find the product of the largest number and x
+int productOfLargest(int array[], int size, int x) {
+  int max = array[0];
+  
+  // Find the maximum element in the array
+  for (int i = 1; i < size; i++) {
+    if (array[i] > max)
+      max = array[i];
+  }
+
+  // Calculate the product of the largest number and x
+  int product = max * x;
+  
+  return product;
+}
+
+// Function to print an array
+void printArray(int array[], int size) {
+  for (int i = 0; i < size; i++) {
+    printf("%d  ", array[i]);
+  }
+  printf("\n");
+}
+
+int main() {
+  int n;
+  printf("Enter the number of elements: ");
+  scanf("%d", &n);
+
+  int array[n];
+  printf("Enter the elements:\n");
+  for (int i = 0; i < n; i++) {
+    scanf("%d", &array[i]);
+  }
+
+  countingSort(array, n);
+
+  printf("Sorted array: ");
+  printArray(array, n);
+
+  int x;
+  printf("Enter the value of x: ");
+  scanf("%d", &x);
+
+  int result = productOfLargest(array, n, x);
+
+  printf("Product of the largest number and x: %d\n", result);
+
+  return 0;
+}
